@@ -76,3 +76,16 @@ Anyone interested in integrating selenium capability with Wraith should check ou
 1. Selenium integration, both running locally on a desktop or on a selenium grid
 2. Browser to browser screenshot comparison
 3. Page component-based comparison
+
+## Docker-Wraith
+
+Wraith can also be run in a Docker container. You can start it by running:
+```
+docker run -P -v /path/to/your/project/wraith:/wraithy -w='/wraithy' bbcnews/wraith
+```
+To make multiple invocations easier you can create an alias:
+```
+alias docker-wraith="docker run -P -v /path/to/your/project/wraith:/wraithy -w='/wraithy' bbcnews/wraith"
+```
+Then you can use `docker-wraith` to interact with your dockerized Wraith.
+Try running `docker-wraith version` to check if it is working properly.
